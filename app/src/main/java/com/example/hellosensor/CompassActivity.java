@@ -49,7 +49,8 @@ public class CompassActivity extends AppCompatActivity implements SensorEventLis
 
     protected void onPause() {
         super.onPause();
-        mSensorManager.unregisterListener(this);
+        mSensorManager.unregisterListener(this, compass);
+        mSensorManager.unregisterListener(this, sensorGravity);
     }
 
     public void onAccuracyChanged(Sensor sensor, int accuracy) {
