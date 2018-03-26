@@ -16,7 +16,8 @@ Blev lite omskrivet, men en del kopiering eftersom metoderna är väldigt lika v
 onSensorChanged var dock ganska mycket eget tänk för att få appen att inte krascha, med användning av sensorEvents “values” och setText från myApp.
 
 För att göra Kompassen använde jag mig en del av det jag gjort i accelerometern.
-https://developer.android.com/guide/topics/sensors/sensors_position.html Använde jag för vilken sensor som behövdes.
+https://developer.android.com/guide/topics/sensors/sensors_position.html 
+Använde jag för vilken sensor som behövdes.
 https://www.javacodegeeks.com/2013/09/android-compass-code-example.html
 Användes för att röra kompassbilden.
 https://www.ssaurel.com/blog/learn-how-to-make-a-compass-application-for-android/
