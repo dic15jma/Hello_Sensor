@@ -1,7 +1,6 @@
 package com.example.hellosensor;
 
 import android.content.DialogInterface;
-import android.content.Intent;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
@@ -11,11 +10,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.animation.Animation;
 import android.view.animation.RotateAnimation;
-import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import static android.hardware.SensorManager.getOrientation;
 
 public class CompassActivity extends AppCompatActivity implements SensorEventListener {
     private SensorManager mSensorManager;
@@ -42,7 +39,7 @@ public class CompassActivity extends AppCompatActivity implements SensorEventLis
         mSensorManager = (SensorManager)getSystemService(SENSOR_SERVICE);
         sensorGravity = mSensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
         compass = mSensorManager.getDefaultSensor(Sensor.TYPE_MAGNETIC_FIELD);
-        image = (ImageView) findViewById(R.id.imageViewCompass);
+        image = findViewById(R.id.imageViewCompass);
 
         // Get the Intent that started this activity and extract the string
         start();
@@ -128,7 +125,8 @@ public class CompassActivity extends AppCompatActivity implements SensorEventLis
         }
 
         TextView textView = findViewById(R.id.textView7);
-        textView.setText(String.format("%.2f", mAzimuth) + " grader");
+        mAzimuth = Math.round(mAzimuth);
+        textView.setText(mAzimuth + " grader");
 
         RotateAnimation ra = new RotateAnimation(
                 currentDegree,
