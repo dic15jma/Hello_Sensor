@@ -1,6 +1,3 @@
-# Hello_Sensor
-Avancerad Interaktionsdesign
-
 
 Användes för att skapa något överhuvudtaget.
 https://developer.android.com/training/basics/firstapp/index.html 
@@ -22,4 +19,4 @@ https://www.ssaurel.com/blog/learn-how-to-make-a-compass-application-for-android
 Användes för att ta reda på riktningen.
 Använde i slutändan mycket kod från:
 https://www.wlsdevelop.com/index.php/en/blog?option=com_content&view=article&id=38
-Då koden inte fungerade som den skulle.
+Då koden inte fungerade som den skulle. Det blev alltså väldigt mycket kopiering i slutet, där start och onSensorChanged togs nästan direkt av, med några få ändringar i onSensorChanged.
